@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import { getMonth } from "../../helpers/Date";
+import { getMonth } from "../../helpers/Date";  
 
 import "./style.scss";
 
@@ -11,6 +11,7 @@ const EventCard = ({
   label,
   small = false,
   ...props
+
 }) => (
     <div
       data-testid="card-testid"
@@ -29,17 +30,19 @@ const EventCard = ({
   );
 
 EventCard.propTypes = {
-  imageSrc: PropTypes.string.isRequired,
+  imageSrc: PropTypes.string,
   imageAlt: PropTypes.string,
   date: PropTypes.instanceOf(Date).isRequired,
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string,
   small: PropTypes.bool,
   label: PropTypes.string.isRequired,
 };
 
 EventCard.defaultProps = {
-  imageAlt: "image",
+  imageSrc:"image",
+  imageAlt:"image",
+  title:"Default title",
   small: false,
 }
-
+  
 export default EventCard;
