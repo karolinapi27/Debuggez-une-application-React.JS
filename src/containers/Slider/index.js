@@ -19,10 +19,6 @@ useEffect(() => {
   return () => clearInterval(intervalId); 
 }, [byDateDesc.length]);
 
-const handlePaginationClick = (clickedIndex) => {
-  setIndex(clickedIndex);
-};
-
   return (
     <div className="SlideCardList">
       {byDateDesc?.map((event, idx) => {
@@ -55,7 +51,6 @@ const handlePaginationClick = (clickedIndex) => {
                   type="radio"
                   name="radio-button"
                   checked={index === radioIdx} 
-                  onClick={() => handlePaginationClick(radioIdx)}
                   readOnly
                 />
               ))}

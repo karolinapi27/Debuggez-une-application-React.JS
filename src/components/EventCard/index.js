@@ -35,7 +35,7 @@ EventCard.propTypes = {
   date: PropTypes.instanceOf(Date).isRequired,
   title: PropTypes.string,
   small: PropTypes.bool,
-  label: PropTypes.string.isRequired,
+  label: PropTypes.string,
 };
 
 EventCard.defaultProps = {
@@ -43,6 +43,7 @@ EventCard.defaultProps = {
   imageAlt:"image",
   title:"Default title",
   small: false,
+  label: "label",
 }
   
 export default EventCard;
